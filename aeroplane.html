@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+                margin: 0;
+                padding: 0;
+        }
+        body{
+                width: 100%;
+                height: 100vh;
+        }
+        .sky{
+                width: 100%;
+                height: 100vh;
+                position: relative;
+                background-color: #ffffff;
+                overflow: hidden;
+        }
+        .clouds{
+                position: absolute;
+                height: 20vh;
+                width: 500%;
+                top:1;
+                z-index: 3;
+                left:-2000px;
+                background-size: contain;
+                background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG_nLA5qi-k9Dpe0E6Uz3dY-NCFANka5BCUgcurFi0pkzZSkiA6SabxtvaIGNvkWqrpiE&usqp=CAU');
+                background-repeat: repeat-x;
+                animation: clouds 40s linear infinite;
+        }
+        @keyframes clouds{
+            100%{
+                transform: translateX(2000px);
+            }
+        }
+        .mountains{
+                position: absolute;
+                bottom: 0;
+                height: 32vh;
+                right: 0;
+                z-index: 3;
+                left: -2000px;
+                width: 500%;
+                background-size: contain;
+                background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBUSEhIVFRIXFxgWExcWFRUWGhgaFRoYGBcbGBcZICggGBolGxsbITEhJSkrLi4uFyAzODMsNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAJ8BPQMBIgACEQEDEQH/xAAbAAEAAwEBAQEAAAAAAAAAAAAAAwQFBgIBB//EADUQAAEDAgUCAwcDBQEBAQAAAAEAAhEDIQQFEjFBUWFxgZEGEyIyobHwI8HRQlJy4fEzYhX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A/cUREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERARfAvqAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICL4vqAkIiAiIgIiICIiAiIgIiICjr12sbqcYH8qRZufH9Nv+Q4B4d1QWMBi21GjSbgCR0VpYfs+Pid4AccQtxAREQEREBERAREQEREBERAREQEREBERAREQEREFXHYxtMDUYJI67SJ+ino1WvaHNMg7FY2fH4xttva3qr2TH9IeJ6DnsgvIiICIiAiIgIiICIiAiIgLJz9whjZ3cT5AEfuvWaZi6m7S0N21GZ6xAAWTi8aXVZeAC0RF+vHdBoZGfjcIgRa8raWLkbjrcIMaeZ5PE8RHqtpARZuY5s2k7SGlx54idrxdQ4fP6Z+cFnfcfS6DYRRYfENe3U0yPAj7qVBFiMQ1glxjeByYvbqVWwGZNquc0AiLieR1jxVP2id8m/8AWbH/ABB+6r5D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');
+                background-repeat: repeat-x;
+                animation: mountains 10s linear infinite;
+        }
+        @keyframes mountains{
+            100%{
+                transform: translateX(2000px);
+            }
+        }
+        .plane{
+                height: 300px;
+                width: 50%;
+                position: absolute;
+                top:15%;
+                z-index: 1;
+                left: 20%;
+        }
+        .plane>img{
+                height: 100%;
+                width: 90%;
+        }
+        .msg{
+                height: 100vh;
+                width: 100%;
+                position: relative;
+                display: none;
+                text-align: center;
+                font-style: italic;
+                font-weight: 900;
+                background-color: rgb(92, 179, 236);
+            }
+        .msg>h2{
+            position: absolute;
+            width: 100%;
+            animation: fade 10s linear infinite;
+        }
+        @keyframes fade{
+            0%{
+                top: 0;
+            }
+            50%{
+                top:60%;
+            }
+            100%{
+                top:0;
+            }
+        }
+        @media(max-width:720px) and (max-height:500px){
+            .plane{
+                height: 200px;
+            }
+        }
+        @media(max-width:550px){
+            .sky{
+                display: none;
+            }
+            .msg{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sky">
+        <div class="clouds"></div>
+        <div class="plane"><img src="https://images.twinkl.co.uk/tw1n/image/private/t_630/image_repo/39/1c/aeroplane_ver_3.jpg" class="aeroplane"/></div>
+        <div class="mountains"></div>
+    </div>
+    <div class="msg">
+        <h2>Please Switch the Phone to Landscape mode</h2>
+    </div>
+</body>
+</html>
